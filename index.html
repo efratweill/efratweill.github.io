@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>tofes</title>
+    <meta name="description" content="catdown" />
+    <meta name="author" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="formdiv">
+      <h1>Catdown</h1>
+      <div id="formdiv">
+        <div id="border">
+          <form id="form" action="/">
+            <p>Set the time untill cat shows up:</p>
+            <div id="time">
+              <label for="minutes">minutes:</label><br />
+              <input type="number" id="minutes" name="minutes" /><br />
+              <label for="seconds">seconds:</label><br />
+              <input type="number" id="seconds" name="seconds" /><br />
+            </div>
+            <div id="countdown" class="countdown">0:00</div>
+            <button type="button" id="startbutton">Start countdown</button>
+            <button type="button" id="pause">Pause countdown</button>
+            <button type="button" id="stopbutton">Stopppp!</button><br />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

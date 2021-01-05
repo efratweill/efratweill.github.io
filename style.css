@@ -1,0 +1,91 @@
+body {
+  font-family: monospace;
+}
+p {
+  color: white;
+  font-size: 18px;
+}
+
+#form {
+  width: 400px;
+  background-color: black;
+  text-align: center;
+  border: 2px solid #51ff0d;
+  box-shadow: 4px 4px 8px 0 lightgreen;
+}
+label {
+  color: white;
+  font-size: 18px;
+}
+#countdown {
+  font-size: 30px;
+  color: red;
+  margin: 15px;
+}
+input {
+  width: 40px;
+  margin: 15px;
+}
+formdiv img {
+  max-width: 40%;
+  max-height: fit-content;
+}
+#form div {
+  margin: 15px;
+}
+#startbutton {
+  background-color: #51ff0d;
+  border: none;
+  margin: 15px;
+  box-shadow: 4px 4px 8px 0 lightgreen;
+}
+#startbutton:hover {
+  background-color: #cafcb6;
+}
+#stopbutton {
+  background-color: red;
+  border: none;
+  margin: 15px;
+  box-shadow: 4px 4px 8px 0 rgba(163, 69, 69, 0.932);
+}
+#stopbutton:hover {
+  background-color: rgb(248, 151, 148);
+}
+#pause {
+  box-shadow: 3px 3px 8px 0 rgba(253, 252, 252, 0.932);
+}
+
+#border {
+  border: 5px solid #000000;
+  width: 405px;
+}
+#time {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-around;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid rgb(235, 10, 10);
+  border-color: rgb(240, 91, 91) transparent rgb(236, 20, 20) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
