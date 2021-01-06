@@ -28,15 +28,8 @@ startbutton.onclick = function () {
           return res.json();
         })
         .then(function (json) {
-          var cat = json.file;
           formdiv.innerHTML = "<img src=" + json.file + ">";
         });
-      /*async function main() {
-        var res = await fetch("https://aws.random.cat/meow");
-        var json = await res.json();
-        var cat = json.file;
-        formdiv.innerHTML = "<img src=" + json.file + ">";
-      }*/
     }
   }, 1000);
 
