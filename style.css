@@ -65,8 +65,11 @@ formdiv img {
   align-items: baseline;
   justify-content: space-around;
 }
+#catpic {
+  max-width: 370px;
+}
 .lds-dual-ring {
-  display: inline-block;
+  display: none;
   width: 80px;
   height: 80px;
 }

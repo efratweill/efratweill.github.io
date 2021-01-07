@@ -12,6 +12,10 @@ var stopbutton = document.querySelector("#stopbutton");
 
 var formdiv = document.querySelector("#formdiv");
 
+var catpic = document.querySelector("#catpic");
+
+var spinner = document.querySelector(".lds-dual-ring");
+
 startbutton.onclick = function () {
   var secondsleft = +seconds.value + +minutes.value * 60;
   var secondsdown = setInterval(function () {
@@ -22,13 +26,14 @@ startbutton.onclick = function () {
     secondsleft--;
     if (secondsleft === 0) {
       clearInterval(secondsdown);
-      formdiv.innerHTML = '<div class="lds-dual-ring"></div>';
+      spinner.style.display = "inline-block";
       fetch("https://aws.random.cat/meow")
         .then(function (res) {
           return res.json();
         })
         .then(function (json) {
-          formdiv.innerHTML = "<img src=" + json.file + ">";
+          spinner.style.display = "none";
+          catpic.src = json.file;
         });
     }
   }, 1000);
