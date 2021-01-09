@@ -24,7 +24,7 @@ startbutton.onclick = function () {
     min = Math.floor(secondsleft / 60);
     countdown.innerText = min + ":" + sec;
     secondsleft--;
-    if (secondsleft === 0) {
+    if (secondsleft === -1) {
       clearInterval(secondsdown);
       spinner.style.display = "inline-block";
       fetch("https://aws.random.cat/meow")
