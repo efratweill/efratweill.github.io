@@ -18,6 +18,8 @@ var spinner = document.querySelector(".lds-dual-ring");
 
 startbutton.onclick = function () {
   var secondsleft = +seconds.value + +minutes.value * 60;
+  minutes.disabled = true; //blocks the input field
+  seconds.disabled = true; //blocks the input field
   var secondsdown = setInterval(function () {
     var sec = secondsleft % 60;
     sec = sec < 10 ? "0" + sec : sec;
@@ -40,6 +42,9 @@ startbutton.onclick = function () {
 
   stopbutton.onclick = function () {
     clearInterval(secondsdown);
+    minutes.disabled = false;
+    seconds.disabled = false;
+    countdown.innerText = "00:00";
   };
   pausebutton.onclick = function () {
     clearInterval(secondsdown);
