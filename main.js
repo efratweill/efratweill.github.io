@@ -28,6 +28,8 @@ startbutton.onclick = function () {
     secondsleft--;
     if (secondsleft === -1) {
       clearInterval(secondsdown);
+      minutes.disabled = false;
+      seconds.disabled = false;
       spinner.style.display = "inline-block";
       fetch("https://aws.random.cat/meow")
         .then(function (res) {
