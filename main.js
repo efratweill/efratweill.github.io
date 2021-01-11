@@ -15,6 +15,24 @@ var formdiv = document.querySelector("#formdiv");
 var catpic = document.querySelector("#catpic");
 
 var spinner = document.querySelector(".lds-dual-ring");
+var secInput,
+  minInput = 0;
+function shoeInput() {
+  secInput = seconds.value;
+  minInput = minutes.value;
+  minInput = minInput === "" ? "0" : minInput;
+  secInput = secInput === "" ? "0" + secInput : secInput;
+  secInput = secInput < 10 ? "0" + secInput : secInput;
+  countdown.innerText = minInput + ":" + secInput;
+}
+
+seconds.oninput = function () {
+  shoeInput();
+};
+
+minutes.oninput = function () {
+  shoeInput();
+};
 
 startbutton.onclick = function () {
   var secondsleft = +seconds.value + +minutes.value * 60;
