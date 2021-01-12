@@ -4,6 +4,7 @@ var slider = tns({
   speed: 10000,
   items: 1,
   nav: false,
+
   responsive: {
     640: {
       edgePadding: 20,
